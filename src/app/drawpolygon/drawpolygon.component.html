@@ -1,0 +1,25 @@
+
+<h1 >Canvas</h1>
+
+<div class="row">
+    <div class="col-md-6 dropdowndiv">
+        <div>
+            <p>Select the polygon to draw in the canvas...</p>
+        </div>
+        <div>
+            <select name="Polygon" id="Select Shape" (input)="chosenPolygon($event)">
+                <option value="Select" disabled>Select</option>
+                <option value="Rectangle" >Rectangle</option>
+                <option value="Square">Square</option>
+                <option value="Circle">Circle</option>
+            </select>
+        </div>
+        <br>
+       <div *ngIf="selected">
+        You have selected to draw a {{selected}}
+       </div>
+    </div>
+    <div class="col-md-6">
+        <canvas id="myCanvas" width="500" height="400" ></canvas>
+    </div>
+</div>

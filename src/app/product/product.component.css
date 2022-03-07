@@ -1,0 +1,30 @@
+.maindiv{
+    color: blue;
+    text-align: left;
+    overflow: scroll;
+    background-color:#F5EEDC; 
+	font-family: 'Dancing Script','cursive';
+	  
+}
+.listclass{ 
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+	background-color: aliceblue;  
+	padding-left: 15%;
+    font-family: 'Dancing Script','cursive';
+}
+
+.contentdiv{
+    margin: 10px;
+    display: inline-block; 
+	text-align: center;
+    font-family: 'Montserrat Alternates', sans-serif;
+	
+}
+.imgdiv{
+    height: 200px;
+    width: 200px;
+}
+
+  

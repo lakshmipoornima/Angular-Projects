@@ -1,0 +1,46 @@
+<h2 style="color: blue;margin-top:20%;text-align: center;" *ngIf="cartItemlist.length==0">Your Cart is empty...</h2>
+<div class="maindiv " *ngIf="cartItemlist.length>0">
+    <ul>
+        <li *ngFor="let product of cartItemlist" class="listclass">
+
+            <div class="container">
+                <div class="row  " style="position: relative;">
+                    <div class="col-sm-4  col-lg-6">
+                        <div class="contentdiv">
+                            <div>
+                                <img src="../../assets/images/{{product.img}}" alt="" class="imgdiv">
+                            </div>
+                            <div>
+                                {{product.name}}
+                            </div>
+                            <div>
+                                {{product.price | currency:"INR"}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4" style=" margin-top:25px;margin-left: 0;">
+                        <div>
+                            <button class="btn btn-danger" (click)="updateQty(product)">Qty:{{product.qty}}</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </li>
+    </ul>
+    <div class="pricediv">
+        <div class="row">
+
+            <div class="col-sm-3 col-md-3">
+
+            </div>
+            <div class="col-sm-3 col-md-3">
+                Total Price:
+            </div>
+            <div class="col-sm-3 col-md-3">
+                <i class='fas fa-rupee-sign'>{{tprice | currency:"INR"}}</i>
+            </div>
+
+        </div>
+    </div>
+
+</div>

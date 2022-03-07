@@ -1,0 +1,23 @@
+#myCanvas{
+    border:1px solid #000000;
+    background-color: white;
+    margin-left: 1rem;
+}
+
+h1{
+    margin-left: 65%;
+    
+}
+
+.dropdowndiv{
+    padding-left: 10%;
+    font-size: larger;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #11468F;
+}
+
+.dropdowndiv p{
+    color: blue;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 20px;
+}

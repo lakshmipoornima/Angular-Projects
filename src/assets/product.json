@@ -1,0 +1,25 @@
+[
+    {
+        "id":"101",
+        "name":"Angular Development ",
+        "price":1000,
+        "img":"angulardevelopment.png",
+        "qty":1
+        
+    },
+    {
+        "id":"102",
+        "name":"Eloquent Javascript",
+        "price":1500,
+        "img":"eloquentjavascript.jpg",
+        "qty":1
+    },
+    {
+        "id":"103",
+        "name":"Pencil",
+        "price":100,
+        "img":"pencil.jpg",
+        "qty":1
+    }
+    
+]

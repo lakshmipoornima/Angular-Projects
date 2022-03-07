@@ -1,0 +1,48 @@
+<div class="maindiv">
+    
+
+<div class="my-div">
+
+    <div *ngIf='(value1==""&& operator=="") ||(value1!=""&& operator=="")'>
+        <input type="number" value="{{value1}}"  class="inputdiv">
+    </div>
+    <div *ngIf='(value1!="" && operator!="")||(value2=="" && operator!="" )' >
+        <input type="number" value="{{value2}}"  class="inputdiv" placeholder="{{value1}}{{operator}}">
+    </div>
+
+    <div *ngIf='value1!="" && equaloperator!="" && value2!=""'>
+        
+        <input type="text" value="{{resultstring}}" class="inputdiv" >
+    </div>
+</div>
+<div class="numdiv">
+
+    <div class="btn btn-groups numgroup ">
+        <div>
+            <button style="width: 33%;" class="btn btn-dark btn-lg" *ngFor='let i of [1,2,3]' (click)=setValue(i)>{{i}}</button>
+
+        </div>
+        <div>
+            <button style="width: 33%;" class="btn btn-dark btn-lg" *ngFor='let i of [4,5,6]' (click)=setValue(i)>{{i}}</button>
+
+        </div>
+        <div>
+            <button style="width: 33%;" class="btn btn-dark btn-lg" *ngFor='let i of [7,8,9]' (click)=setValue(i)>{{i}}</button>
+
+        </div>
+        <div>
+            <button style="width: 33%;" class="btn btn-dark btn-lg" *ngFor='let i of [0]' (click)=setValue(i)>{{i}}</button>
+            <button style="width: 33%;" class="btn btn-dark btn-lg" *ngFor='let opr of ["+","-"]' (click)=setOperator(opr)>{{opr}}</button>
+
+        </div>
+        <div>
+            <button class="btn btn-dark btn-lg" *ngFor='let opr of ["*","/","="]'
+                (click)=setOperator(opr)>{{opr}}</button>
+            <button class="btn btn-dark btn-lg" (click)="clearInput()">Clr</button>
+        </div>
+    </div>
+
+
+
+</div>
+</div>

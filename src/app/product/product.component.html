@@ -1,0 +1,23 @@
+<div class="maindiv ">
+    <ul>
+        <li class="listclass" *ngFor="let product of productlist">
+            <div class="row  ">
+                <div class="col-lg-6 col-sm-3 ">
+                    <div class="contentdiv">
+                        <img src="../../assets/images/{{product.img}}" alt="" class="imgdiv">
+                        <br>
+                        <br>
+                        {{product.name}}
+                        <br>
+                        <br>
+                        {{product.price | currency:"INR"}}
+                        <br>
+                        <br>
+                        <button class="btn btn-warning cartbutton" (click)="addToCart(product)">ADD TO CART</button>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,34 @@
+.maindiv{
+    color: blue;
+    text-align: left;
+    overflow: scroll;
+    background-color:#F5EEDC; 
+	font-family: 'Montserrat Alternates', sans-serif;
+	  
+	  
+}
+.listclass{ 
+    list-style-type: none;
+    padding: 10px;
+	background-color: aliceblue;  
+	padding-left: 15%;
+}
+
+.contentdiv{
+    
+    display: inline-block; 
+	text-align: center;
+	
+}
+.imgdiv{
+    height: 200px;
+    width: 200px;
+}
+.pricediv{
+    height: auto;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+  
