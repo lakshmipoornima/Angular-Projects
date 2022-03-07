@@ -1,4 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Circle } from '../circle';
+import { Rectangle } from '../rectangle';
+import { Square } from '../square';
 
 @Component({
   selector: 'app-drawpolygon',
@@ -15,25 +18,28 @@ export class DrawpolygonComponent implements OnInit {
 
 
   chosenPolygon(event: any) {
+
     this.selected = event.target.value;
-    console.log(this.selected, typeof this.selected);
+   
 
     var c = <HTMLCanvasElement>document.getElementById("myCanvas");
     var ctx: CanvasRenderingContext2D = c.getContext("2d")!;
+    var obj;
+
+    
     ctx.beginPath();
     if (this.selected === "Circle") {
-      ctx.arc(95, 50, 40, 0, 2 * Math.PI);
-      ctx.stroke();
+     obj=new Circle()
+     obj.draw(ctx)
     }
 
     else if (this.selected === "Rectangle") {
-      ctx.rect(100, 100, 150, 75);
-      ctx.stroke();
+      obj=new Rectangle()
+      obj.draw(ctx)
     }
     else {
-      ctx.rect(200, 200, 150, 150);
-      ctx.stroke();
-
+      obj=new Square()
+      obj.draw(ctx)
     }
   }
 
